@@ -27,7 +27,9 @@
     "cover:open": "scripty",
     "client": "npm-run-all --parallel client:*",
     "client:reload-server": "livereload client/",
-    "client:static-server": "http-server client/"
+    "client:static-server": "http-server client/",
+    "precommit": "npm run lint",
+    "prepush": "npm run test"
   },
   "keywords": [],
   "author": "duxin <duxin@kuaishou.com>",

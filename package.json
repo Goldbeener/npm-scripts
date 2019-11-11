@@ -28,8 +28,14 @@
     "client": "npm-run-all --parallel client:*",
     "client:reload-server": "livereload client/",
     "client:static-server": "http-server client/",
-    "precommit": "npm run lint",
+    "precommit": "lint-staged",
     "prepush": "npm run test"
+  },
+  "lint-staged": {
+    "*.js": "eslint",
+    "*.less": "stylelint",
+    "*.css": "stylelint",
+    "*.json": "jsonlint --quiet"
   },
   "keywords": [],
   "author": "duxin <duxin@kuaishou.com>",

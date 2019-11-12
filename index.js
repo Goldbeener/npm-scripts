@@ -5,6 +5,7 @@ function fn () {
 }
 
 console.log(str);
+
 fn();
 
 const add = (a, b) => {

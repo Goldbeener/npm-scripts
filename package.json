@@ -27,7 +27,13 @@
     "cover:open": "scripty",
     "client": "npm-run-all --parallel client:*",
     "client:reload-server": "livereload client/",
-    "client:static-server": "http-server client/"
+    "client:static-server": "http-server client/",
+    "prebuild": "rm -rf dist && mkdir -p dist/{images,styles,scripts}",
+    "build:images": "scripty",
+    "build:styles": "scripty",
+    "build:scripts": "scripty",
+    "build:hash": "scripty",
+    "build": "scripty"
   },
   "lint-staged": {
     "*.js": "eslint",
@@ -41,6 +47,7 @@
   "devDependencies": {
     "chai": "^4.2.0",
     "chalk": "^3.0.0",
+    "cssmin": "^0.4.3",
     "eslint": "^6.6.0",
     "eslint-config-standard": "^14.1.0",
     "eslint-plugin-import": "^2.18.2",
@@ -48,9 +55,12 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
     "eslint-plugin-vue": "^5.2.3",
+    "hashmark": "^5.0.0",
     "http-server": "^0.11.1",
     "husky": "^3.0.9",
+    "imagemin-cli": "^5.0.0",
     "jsonlint": "^1.6.3",
+    "less": "^3.10.3",
     "lint-staged": "^9.4.2",
     "livereload": "^0.8.2",
     "mocha": "^6.2.2",
@@ -58,10 +68,12 @@
     "nyc": "^11.3.0",
     "onchange": "^6.1.0",
     "opn-cli": "^3.1.0",
+    "replaceinfiles": "^1.1.4",
     "scripty": "^1.9.1",
     "shelljs": "^0.8.3",
     "stylelint": "^11.1.1",
-    "stylelint-scss": "^3.12.1"
+    "stylelint-scss": "^3.12.1",
+    "uglify-es": "^3.3.10"
   },
   "nyc": {
     "exclude": [

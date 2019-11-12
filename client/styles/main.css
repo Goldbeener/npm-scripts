@@ -1,0 +1,18 @@
+body {
+    background: green;
+    h2 {
+        color: white;
+        font-size: 26px;
+        font-weight: bold;
+    }
+    .pic {
+        width: 540px;
+        height: 360px;
+    }
+    .pic-container {
+        background: url('../images/huangye.jpeg') no-repeat;
+    }
+}
+
+
+

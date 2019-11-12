@@ -27,9 +27,7 @@
     "cover:open": "scripty",
     "client": "npm-run-all --parallel client:*",
     "client:reload-server": "livereload client/",
-    "client:static-server": "http-server client/",
-    "precommit": "lint-staged",
-    "prepush": "npm run test"
+    "client:static-server": "http-server client/"
   },
   "lint-staged": {
     "*.js": "eslint",

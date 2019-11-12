@@ -7,8 +7,6 @@ function fn () {
 console.log(str);
 fn();
 
-fn(2);
-
 const add = (a, b) => {
     if (typeof a === 'number' && typeof b === 'number') {
         return a + b;
